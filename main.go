@@ -24,9 +24,9 @@ func line() {
 func main() {
 	fmt.Println("REST API testing server")
 	debug("PID: %d\n", os.Getpid())
-	line()
 	http.HandleFunc("/", handle)
 	debug("Listening for HTTP queries on port %s ...\n", PORT)
+	line()
 	err := http.ListenAndServe(":"+PORT, nil)
 	if err != nil {
 		panic(err)
