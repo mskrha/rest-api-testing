@@ -22,6 +22,7 @@ func line() {
 }
 
 func main() {
+	fmt.Println("REST API testing server")
 	debug("PID: %d\n", os.Getpid())
 	line()
 	http.HandleFunc("/", handle)
