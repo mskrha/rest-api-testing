@@ -1,6 +1,7 @@
 package main
 
 import (
+	"crypto/sha256"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -47,6 +48,8 @@ func handle(w http.ResponseWriter, r *http.Request) {
 		b := string(body)
 		if len(b) > 0 {
 			debug("Body: %s\n", b)
+			sum := sha256.Sum256(body)
+			fmt.Printf("Body SHA256: %x\n", sum)
 		} else {
 			debug("Empty body\n")
 		}
