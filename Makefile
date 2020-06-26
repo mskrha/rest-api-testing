@@ -1,4 +1,4 @@
-BUILD = rest_api_testing
+BUILD = rest-api-testing
 SRCS = main.go
 
 all: clean format $(BUILD)
