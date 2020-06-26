@@ -15,7 +15,7 @@ const (
 )
 
 func debug(format string, a ...interface{}) {
-	fmt.Fprintf(os.Stdout, time.Now().Format("2006-01-02 15:04:05.000000000")+": "+format, a...)
+	fmt.Printf(time.Now().Format("2006-01-02 15:04:05.000000000")+": "+format, a...)
 }
 
 func line() {
